@@ -1,0 +1,24 @@
+{
+  "name": "@themang/batch",
+  "description": "Batch add/delete json documents to cloud search",
+  "repository": "git://github.com/themang/batch.git",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "dependencies": {
+    "@weo-edu/is": "^0.1.0",
+    "@weo-edu/schema": "^0.1.7",
+    "@weo-edu/validate": "^2.12.4",
+    "object-assign": "^4.0.1",
+    "ramda": "^0.17.1",
+    "snake-case": "^1.1.1"
+  },
+  "devDependencies": {
+    "mocha": "2.x",
+    "standard": "^4.0.0"
+  },
+  "engines": {
+    "node": "~0.10.38",
+    "npm": "~2.9.0"
+  }
+}
