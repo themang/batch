@@ -40,4 +40,5 @@ describe('batch', function () {
     assert(validate(del).valid)
     assert(del.type === 'delete')
   })
+
 })
