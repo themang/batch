@@ -10,7 +10,7 @@ var validate = validator(BatchSchema)
 
 describe('batch', function () {
   it('should be the right form', function () {
-    var b = batch([{name: 'foo', bar: 'bax'}])
+    var b = batch([{name: 'foo', bar: 'bax'}], {key: 'name'})
     b.forEach(function (add) {
       assert(validate(add).valid)
     })
@@ -26,7 +26,7 @@ describe('batch', function () {
   })
 
   it('should have option to add an all field', function () {
-    var b = batch([{name: 'foo', bar: ['bax', 'bat']}], {all: true})
+    var b = batch([{name: 'foo', bar: ['bax', 'bat']}], {all: true, key: 'name'})
     var add = b[0]
     assert(validate(add).valid)
     assert(add.fields.all)
@@ -35,7 +35,7 @@ describe('batch', function () {
   })
 
   it('should allow type of operation to be changed', function () {
-    var b = batch([{name: 'foo', bar: ['bax', 'bat']}], {type: 'delete'})
+    var b = batch([{name: 'foo', bar: ['bax', 'bat']}], {type: 'delete', key: 'name'})
     var del = b[0]
     assert(validate(del).valid)
     assert(del.type === 'delete')
